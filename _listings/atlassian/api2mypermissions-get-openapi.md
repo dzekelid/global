@@ -26,6 +26,21 @@ produces:
 consumes:
 - application/json
 paths:
+  /settings/theme/selected:
+    get:
+      summary: Get global theme
+      description: |-
+        Returns the globally assigned theme.
+
+        **[Permissions](https://confluence.atlassian.com/x/_AozKw) required**: None
+      operationId: com.atlassian.confluence.plugins.restapi.resources.ThemeResource.getGlobalTheme_get
+      x-api-path-slug: settingsthemeselected-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Global
+      - Theme
   /api/2/attachment/meta:
     get:
       summary: Get global attachment settings
